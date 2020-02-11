@@ -10,8 +10,6 @@ const Auth = props => {
                     </div>
                 </Col>
             </Row>
-
-
         </Container>
     );
 }
