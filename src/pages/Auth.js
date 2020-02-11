@@ -8,6 +8,7 @@ const Auth = props => {
                     <div className="w-100 text-center">
                         AUTH FORM
                     </div>
+                    <div></div>
                 </Col>
             </Row>
         </Container>
