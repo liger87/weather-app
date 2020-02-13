@@ -5,7 +5,7 @@ const Auth = props => {
     return (
         <Container className="vh-100">
             <Row className="justify-content-center vh-100">
-                <Col xs="6" className="d-flex align-items-center">
+                <Col xs="12" sm="10" md="8" lg = "6" className="d-flex align-items-center">
                     <AuthForm />
                 </Col>
             </Row>
