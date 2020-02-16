@@ -42,14 +42,21 @@ const AuthForm = (props) => {
 
         // const userExists = users.some((existedUser) => existedUser.email === user.email);
         if (!userExists) {
-            setMessage(null);
-            users.push(user);
-            localStorage.setItem("users", JSON.stringify(users));
+            if(user.pass.length > 2 && user.pass.length < 16) {
+                setMessage(null);
+                users.push(user);
+                localStorage.setItem("users", JSON.stringify(users));
+            } else {
+                setMessage("Set another password. It is too short or too long");
+            }
+            // setMessage(null);
+            // users.push(user);
+            // localStorage.setItem("users", JSON.stringify(users));
         } else {
             setMessage("User with email ${email} is already exists");
         }
 
-        console.log( users)
+        console.log( user.pass.length)
     }
 
     const login = () => {
